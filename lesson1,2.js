@@ -1,3 +1,5 @@
+/* lesson2 */
+
 /* // const num = 333;
 // if (num > 15) {
 //   console.log(`${num} больше 15`);
