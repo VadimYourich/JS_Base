@@ -66,3 +66,35 @@ const arr = Array(50).fill(0);
 const sum = arr.map((_, i) => 2 + i * 2).reduce((acc, el) => acc + el, 0);
 console.log(sum);
  */
+
+/* 
+const sum = Array.from({length: 9}, (_,i) => i + 1).join('-')
+console.log('-' + sum + '-');
+ */
+
+/* 
+// console.log(arr.filter(el => {
+//     return el != 0;
+// }));
+const arr = [2,5,9,0,3,1,4];
+arr.splice(1,2,'a','g') //вырезали и заменили два элемента
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 0) break;
+//     console.log(arr[i]);
+// }
+
+// arr.forEach(function(el, ind) {
+//     if (el === 0) {
+//         arr.splice(ind)}
+// } )
+console.log(arr);
+ */
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+const res1 = arr
+  .filter((el) => el % 2 === 0)
+  .forEach((el) => console.log(el * el));
+const res2 = arr
+  .filter((el) => el % 3 === 0)
+  .forEach((el) => console.log(el * el * el));
