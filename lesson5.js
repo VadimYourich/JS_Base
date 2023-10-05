@@ -126,7 +126,63 @@ console.log(arr);
 // console.log(sum);
  */
 
+/* 
+// const question = "Зимой и летом одним цветом?";
+// const hints = ["Подсказка 1: Постоянно зелёная", "Подсказка 2: Живёт в лесу"];
+// const answer = "Ель";
+// const riddles = {
+//   question,
+//   hints,
+//   answer,
+//   askQuestion: function () {
+//     let userAnswer = prompt(this.question);
+//     userAnswer = userAnswer.toLowerCase();
+//     if (userAnswer === this.answer.toLowerCase()) {
+//       console.log("Ответ верный");
+//     } else {
+//       for (const hint of this.hints) {
+//         alert(hint);
+//         userAnswer = prompt(this.question);
+//         userAnswer = userAnswer.toLowerCase();
+//         if (userAnswer === this.answer.toLowerCase()) {
+//           console.log("Ответ верный");
+//           return;
+//         }
+//       }
+//     }
+//     console.log("Вы проиграли");
+//   },
+// };
+// riddles.askQuestion();
+
 const question = "Зимой и летом одним цветом?";
 const hints = ["Подсказка 1: Постоянно зелёная", "Подсказка 2: Живёт в лесу"];
 const answer = "Ель";
-const riddles = {};
+class Riddle {
+  constructor(question, hints, answer) {
+    this.question = question;
+    this.hints = hints;
+    this.answer = answer;
+  }
+  askQuestion() {
+    let userAnswer = prompt(this.question);
+    userAnswer = userAnswer.toLowerCase();
+    if (userAnswer === this.answer.toLowerCase()) {
+      console.log("Ответ верный");
+    } else {
+      for (const hint of this.hints) {
+        alert(hint);
+        userAnswer = prompt(this.question);
+        userAnswer = userAnswer.toLowerCase();
+        if (userAnswer === this.answer.toLowerCase()) {
+          console.log("Ответ верный");
+          return;
+        }
+      }
+    }
+    console.log("Вы проиграли");
+  }
+}
+const riddles = new Riddle(question, hints, answer);
+riddles.askQuestion();
+ */
