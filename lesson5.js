@@ -125,3 +125,8 @@ console.log(arr);
 // }
 // console.log(sum);
  */
+
+const question = "Зимой и летом одним цветом?";
+const hints = ["Подсказка 1: Постоянно зелёная", "Подсказка 2: Живёт в лесу"];
+const answer = "Ель";
+const riddles = {};
