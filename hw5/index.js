@@ -71,39 +71,43 @@ products.forEach((el) => (el.price = el.price * 0.85));
 console.log(products);
 
 // Задание 4
-// 1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна фотография используя метод filter. Исходные данные - массив products.
+// 1. Необходимо вывести в консоль массив продуктов, в которых есть хоть одна фотография используя метод filter. Исходные данные - массив productss.
 // 2. Необходимо отсортировать массив products используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
 
-// ```
-// const products = [
-// {
-// id: 3,
-// price: 127,
-// photos: [
-// "1.jpg",
-// "2.jpg",
-// ],
-// },
-// {
-// id: 5,
-// price: 499,
-// photos: [],
-// },
-// {
-// id: 10,
-// price: 26,
-// photos: [
-// "3.jpg",
-// ],
-// },
-// {
-// id: 8,
-// price: 78,
-// },
-// ];
+const productss = [
+  {
+    id: 3,
+    price: 127,
+    photos: ["1.jpg", "2.jpg"],
+  },
+  {
+    id: 5,
+    price: 499,
+    photos: [],
+  },
+  {
+    id: 10,
+    price: 26,
+    photos: ["3.jpg"],
+  },
+  {
+    id: 8,
+    price: 78,
+  },
+];
 
-// []()
-// []()
+console.log("Продукты, содержащие фото:");
+console.log(
+  productss.filter((el) => {
+    if (el.hasOwnProperty("photos") && el.photos.length > 0) {
+      return el;
+    }
+  })
+);
+
+console.log("\nСортировка 'productss' по возрастанию 'price':");
+console.log(productss.sort((more, less) => more.price - less.price));
+
 // **Задание 5**
 // Дано 2 массива
 // const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
@@ -111,3 +115,19 @@ console.log(products);
 // ```
 
 // Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, а значения второго массива — значениями.
+
+const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const ru = [
+  "понедельник",
+  "вторник",
+  "среда",
+  "четверг",
+  "пятница",
+  "суббота",
+  "воскресенье",
+];
+const daysWeek = en.reduce((acc, el, i) => {
+  acc[el] = ru[i];
+  return acc;
+}, []);
+console.log(daysWeek);
