@@ -42,13 +42,86 @@ console.log(user);
  */
 
 /* 
-из массивов собрали объект
+// из массивов собрали объект
+
+// const arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+// const arr2 = [1,2,3,4,5,6,7];
+// const obj = {};
+// for (let i = 0; i < arr1.length; i++) {
+//     obj[arr1[i]] = arr2[i]
+// }
+// console.log(obj);
 
 const arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 const arr2 = [1,2,3,4,5,6,7];
-const obj = {};
-for (let i = 0; i < arr1.length; i++) {
-    obj[arr1[i]] = arr2[i]
-}
+const obj = arr1.reduce((acc, el, i) => {
+    acc[el] = arr2[i];
+    return acc;
+}, {});
 console.log(obj);
+ */
+
+/* 
+конвертнули в массив и возвели в квадрат значения объекта
+const obj = {x: 1, y: 2, z: 3};
+// console.log(Object.values(obj));
+// console.log(Object.keys(obj));
+Object.keys(obj).forEach((el) => {
+    obj[el] = obj[el]**2
+})
+console.log(obj);
+ */
+
+/* 
+// получить сумму значений
+const obj = {
+  key1: {
+    key1: 1,
+    key2: 2,
+    key3: 3,
+  },
+  key2: {
+    key1: 4,
+    key2: 5,
+    key3: 6,
+  },
+  key3: {
+    key1: 7,
+    key2: 8,
+    key3: 9,
+  },
+};
+const arrValues = Object.values(obj);
+// console.log(...arrValues);
+const arr = [].concat(...arrValues.map((el) => Object.values(el)))
+console.log(arr);
+
+// // console.log(Object.values(obj));
+// // [
+// //     { key1: 1, key2: 2, key3: 3 },
+// //     { key1: 4, key2: 5, key3: 6 },
+// //     { key1: 7, key2: 8, key3: 9 }
+// // ]
+
+// // const arr = []
+// // const arr1 = Object.values(obj.key1)
+// // const arr2 = Object.values(obj.key2)
+// // const arr3 = Object.values(obj.key3)
+
+// // console.log(arr.concat(arr1, arr2, arr3));
+
+
+// const values = Object.values(obj)
+// const arr = values.reduce((acc, el) => acc.concat(Object.values(el)), [])
+// const sum = arr.reduce((acc, el) => acc + el, 0)
+// console.log(sum);
+
+
+// let sum = 0;
+// for (let key in obj) {
+//     for (let innerKey in obj[key]) {
+//         sum += obj[key][innerKey]
+//     }
+// }
+// console.log(sum);
  */
