@@ -129,5 +129,5 @@ const ru = [
 const daysWeek = en.reduce((acc, el, i) => {
   acc[el] = ru[i];
   return acc;
-}, []);
+}, {});
 console.log(daysWeek);
