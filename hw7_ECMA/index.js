@@ -7,6 +7,8 @@
 // Свойство pages (количество страниц) - число, количество страниц в книге.
 // Метод displayInfo() - выводит информацию о книге (название, автор и количество страниц).
 
+class Book
+
 // // Пример использования класса
 // const book = new Book("BookName1", "Author1", 123);
 // book.displayInfo(); // "Title: BookName1, Author: Author1, Pages: 123"
