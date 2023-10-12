@@ -1,6 +1,6 @@
 "use strict";
 
-// Задание 1: "Управление персоналом компании"
+/* // Задание 1: "Управление персоналом компании"
 
 // Реализуйте класс Employee (сотрудник), который имеет следующие свойства и методы:
 // Свойство name (имя) - строка, имя сотрудника.
@@ -42,7 +42,7 @@ employee.displayInfo(); // "Name: John Smith"
 
 const manager = new Manager("Jane Doe", "Sales");
 manager.displayInfo(); // "Name: John Doe, Department: Sales"
-
+ */
 // Задание 2: "Управление списком заказов"
 
 // Реализуйте класс Product (товар), который имеет следующие свойства и методы:
@@ -66,3 +66,37 @@ manager.displayInfo(); // "Name: John Doe, Department: Sales"
 // order.addProduct(product2);
 
 // console.log(order.getTotalPrice()); // Вывод: 1100
+
+class Product {
+  constructor(name, price, quantity) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+  }
+}
+class Order {
+  constructor(id) {
+    this.id = id;
+    this.products = [];
+  }
+  addProduct(product) {
+    this.products.push(product);
+  }
+  getTotalPrice() {
+    let sumPrice = 0;
+    for (let i = 0; i < this.products.length; i++) {
+      sumPrice += this.products[i]["price"] * this.products[i]["quantity"];
+    }
+    return sumPrice;
+  }
+}
+
+const order = new Order(12345);
+
+const product1 = new Product("Phone", 500, 2);
+order.addProduct(product1);
+
+const product2 = new Product("Headphones", 100, 1);
+order.addProduct(product2);
+console.log(order.products);
+console.log(order.getTotalPrice()); // Вывод: 1100
