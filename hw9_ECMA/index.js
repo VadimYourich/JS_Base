@@ -10,19 +10,26 @@
 // Работа должна быть выполнена с API: https://reqres.in/
 
 async function getUserData(id) {
-  try {
-    const response = await fetch(`https://reqres.in/api/users/${id}`);
-    if (response.ok) {
-      console.log(await response.json());
-    } else {
-      console.log(`Пользователь с id: ${id} - не найден!`);
-    }
-  } catch (error) {
-    console.log(error);
+  const response = await fetch(`https://reqres.in/api/users/${id}`);
+  if (response.ok) {
+    // console.log(await response.json());
+    return await response.json();
   }
+  throw new Error(await response.text());
 }
-getUserData(5);
-getUserData(25);
+
+getUserData(55)
+  .then((result) => console.log(result))
+  .catch((err) => console.log(`Ошибка: ${err.message}`));
+// } else {
+//   console.log(`Пользователь с id: ${id} - не найден!`);
+// }
+// } catch (error) {
+//   console.log(error);
+// }
+
+// getUserData(5);
+// getUserData(25);
 
 // Задание 2. Отправка данных на сервер.
 
@@ -59,13 +66,13 @@ async function saveUserData(user) {
       "Content-Type": "application/json;charset=utf-8",
     },
     body: JSON.stringify(user),
-  })
-    .then(() => {
-      console.log("User data saved successfully");
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
+  });
 }
 
-saveUserData(user);
+saveUserData(user)
+  .then(() => {
+    console.log("User data saved successfully");
+  })
+  .catch((error) => {
+    console.log(error.message);
+  });
