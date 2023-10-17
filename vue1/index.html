@@ -4,7 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <h2>Задание 1</h2>
+      {{ message }}
+
+      <hr />
+      <h2>Задание 2</h2>
+      <p>Товаров корзине {{count}}</p>
+      <button @click="addCount">{{btnText}}</button>
+      <br />
+      <button @click="decCount">Удалить</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const App = {
+        data() {
+          return {
+            message: "Hello Vue!!",
+            count: 0,
+            btnText: "Купить",
+          };
+        },
+        methods: {
+          addCount() {
+            if (this.count < 1) {
+              this.count++;
+              this.btnText = "Товар в корзине";
+            }
+          },
+          decCount() {
+            if (this.count !== 0) {
+              this.count--;
+              this.btnText = "Купить";
+            }
+          },
+        },
+      };
+
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
 </html>
