@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <h2>Задание 1</h2>
+      <button @click="reversedMessage">{{buttonText}}</button>
+      <hr />
+      <h2>Задание 2</h2>
+      <ul>
+        <li v-for="item in list" :key="item.id" @click="deleteItem($event)">
+          {{item.id}} {{item.name}}
+        </li>
+      </ul>
+      <button @click="newElement">Добавить новый элемент списка</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const App = {
+        data() {
+          return {
+            buttonText: "Перевернуть",
+            list: [
+              { id: 1, name: "элемент списка" },
+              { id: 2, name: "элемент списка" },
+              { id: 3, name: "элемент списка" },
+            ],
+            newId: 3,
+          };
+        },
+        methods: {
+          reversedMessage() {
+            this.buttonText = this.buttonText.split("").reverse().join("");
+          },
+          newElement() {
+            this.newId++;
+            this.list.push({ id: this.newId, name: "новый элемент списка" });
+          },
+          deleteItem(event) {
+            this.newId--;
+            event.target.remove();
+          },
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>
