@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Задание 1: 
+1.	Вы разрабатываете страницу для отображения информации о товаре. У вас есть объект product, который содержит информацию о товаре, включая название, цену и URL изображения товара. Вам необходимо отобразить эту информацию на странице с использованием v-bind.
+2.	Добавьте кнопку, которая будет изменять цену товара. При нажатии на кнопку должна генерироваться скидка на товар от 1 до 20% и обновиться цена товара в соответствии с значением скидки -->
+      <div>
+        <h2>{{product.name}}</h2>
+        <p>{{product.price}}</p>
+        <img :src="product.img" alt="apple`s photo" />
+        <button @click="getSale" :disabled="flag">Хочу скидку!</button>
+      </div>
+      <hr />
+      <!-- Вы разрабатываете простое приложение для отображения списка пользователей. У вас есть массив объектов users, где каждый объект представляет одного пользователя с его именем и возрастом. Вам необходимо отобразить каждого пользователя из массива в виде списка на странице.
+users: [
+        { id: 1, name: 'Иван', age: 25 },
+        { id: 2, name: 'Мария', age: 30 },
+        { id: 3, name: 'Алексей', age: 35 },
+        { id: 4, name: 'Елена', age: 28 }
+      ] -->
+      <h2>Задание 2</h2>
+      <ol>
+        <li v-for="user in users" :key="user.id">
+          {{user.name}} - {{user.age}}
+        </li>
+      </ol>
+      <hr />
+      <h2>Задание 3</h2>
+      <!-- 1.	Вы разрабатываете приложение для создания списка покупок. У вас есть массив объектов items, где каждый объект представляет товар с его названием и количеством. Вам необходимо отобразить список товаров, предоставить возможность изменять количество каждого товара и отмечать товары, которые уже куплены.
+        goods: [
+							{ id: 1, title: 'Хлеб', amount: 1 },
+							{ id: 2, title: 'Молоко', amount: 20 },
+							{ id: 3, title: 'Соль', amount: 12 },
+							{ id: 4, title: 'Сахар', amount: 53 },
+						], -->
+      <ul>
+        <li v-for="item in goods" :key="item.id">
+          <label><input type="checkbox" />{{item.title}}</label>
+          <input v-model.lazy="item.amount" type="text" /> {{item.amount}}
+        </li>
+      </ul>
+      <hr />
+      <!-- 1.	Вы разрабатываете приложение для управления списком контактов. У вас есть форма с полями "Имя", "Фамилия" и "Email", где пользователь может вводить информацию о новом контакте. После добавления контакта он должен отображаться в списке контактов. Требуется связать форму с данными и отображать список контактов на странице. -->
+      <form action="#" @submit.prevent="addUser">
+        Name: <input type="text" v-model.lazy="name" /> Sername:
+        <input type="text" v-model.lazy="sername" /> Email:
+        <input type="text" v-model.lazy="mail" />
+        <button>Send</button>
+      </form>
+      <ul>
+        <li
+          v-for="(user, index) in arrUsers"
+          :key="index"
+          @click="deleteUser(index)"
+        >
+          {{user.name}} - {{user.sername}} - {{user.mail}}
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script>
+      const App = {
+        data() {
+          return {
+            name: "",
+            sername: "",
+            mail: "",
+            arrUsers: [],
+            product: {
+              name: "apple",
+              price: 10000,
+              img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN6jdf2Up5gWUsxw4kh23N4b3zMuxTmdGYQH-j-EY&s",
+            },
+            flag: false,
+            users: [
+              { id: 1, name: "Иван", age: 25 },
+              { id: 2, name: "Мария", age: 30 },
+              { id: 3, name: "Алексей", age: 35 },
+              { id: 4, name: "Елена", age: 28 },
+            ],
+            goods: [
+              { id: 1, title: "Хлеб", amount: 1 },
+              { id: 2, title: "Молоко", amount: 20 },
+              { id: 3, title: "Соль", amount: 12 },
+              { id: 4, title: "Сахар", amount: 53 },
+            ],
+          };
+        },
+        methods: {
+          deleteUser(index) {
+            this.arrUsers.splice(index, 1);
+          },
+          getSale() {
+            const sale = Math.floor(Math.random() * 20 + 1);
+            this.product.price =
+              this.product.price - (sale / 100) * this.product.price;
+            this.flag = true;
+          },
+          addUser() {
+            const user = {
+              name: this.name,
+              sername: this.sername,
+              mail: this.mail,
+            };
+            this.arrUsers.push(user);
+            this.name = "";
+            this.sername = "";
+            this.mail = "";
+          },
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>
