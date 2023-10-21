@@ -2,6 +2,7 @@
 @import "mixins";
 @import "headerfooter";
 @import "blog";
+@import "blog-details";
 
 * {
   margin: 0;
@@ -43,6 +44,15 @@ body {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.22px;
+}
+
+%styleTextJost16 {
+  color: $grayColor;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.16px;
 }
 
 .banner {
