@@ -1,0 +1,186 @@
+@import "vars";
+@import "mixins";
+
+.header {
+  margin-top: 53px;
+  margin-bottom: 57px;
+  height: 50px;
+
+  &__menubar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.6s ease-out;
+
+    &:hover .header__logoText {
+      color: $hoverColor;
+      transition: all 0.6s ease-out;
+    }
+    &:active .header__logoText {
+      color: rgb(92, 92, 228);
+      transition: all 0.6s ease-out;
+    }
+
+    &:hover .header__logoimg path {
+      fill: $darkColor;
+      transition: all 0.6s ease-out;
+    }
+    &:active .header__logoimg path {
+      fill: rgb(92, 92, 228);
+      transition: all 0.6s ease-out;
+    }
+  }
+
+  &__logoText {
+    @extend %styleTextDMSerifDisplay;
+    font-size: 40px;
+    line-height: 125%; /* 50px */
+  }
+
+  &__menu {
+    width: 624px;
+    height: 25px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__menuList {
+    width: 243px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 48px;
+  }
+
+  &__menuLink {
+    color: $darkColor;
+    text-align: center;
+    font-family: "Jost";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+    transition: all 0.6s ease-out;
+
+    &:hover {
+      color: $hoverColor;
+      transition: all 0.6s ease-out;
+    }
+    &:active {
+      color: blue;
+    }
+  }
+}
+
+.footer {
+  margin-bottom: 134px;
+
+  &__text,
+  &__menuLink,
+  &__address,
+  &__phone {
+    @extend %styleTextJost;
+  }
+
+  // ---- footer__logos ----
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 126px;
+  }
+
+  &__text {
+    max-width: 393px;
+    padding-top: 18px;
+    padding-bottom: 31px;
+    line-height: 150%; /* 33px */
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 54px;
+  }
+
+  &__iconlink {
+    transition: all 0.6s ease-out;
+  }
+
+  &__iconlink:hover .footer__icon path {
+    fill: $hoverColor;
+    transition: all 0.6s ease-out;
+  }
+
+  &__iconlink:active .footer__icon path {
+    fill: blue;
+  }
+
+  // ---- footer__menubar ----
+  &__heading {
+    @extend %styleTextDMSerifDisplay;
+    font-size: 25px;
+    line-height: 125%; /* 31.25px */
+    margin-bottom: 10px;
+  }
+
+  &__menuList {
+    padding-top: 8px;
+  }
+
+  &__menuLink {
+    line-height: 300%; /* 66px */
+    transition: all 0.6s ease-out;
+
+    &:hover {
+      color: $hoverColor;
+      transition: all 0.6s ease-out;
+    }
+    &:active {
+      color: blue;
+    }
+  }
+
+  // ---- footer__contact ----
+  &__contact {
+    min-width: 258px;
+    padding-left: 230px;
+  }
+
+  &__address {
+    line-height: 150%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__email {
+    font-family: "Jost";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    transition: all 0.6s ease-out;
+
+    &:hover {
+      color: $hoverColor;
+      transition: all 0.6s ease-out;
+    }
+    &:active {
+      color: blue;
+      transition: all 0.6s ease-out;
+    }
+  }
+
+  &__phone {
+    padding-top: 20px;
+    line-height: 300%;
+  }
+}
