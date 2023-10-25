@@ -1,0 +1,191 @@
+@import "vars";
+@import "mixins";
+@import "headerfooter";
+
+.top-banner {
+  min-height: 351px;
+  margin-top: -12px;
+  margin-bottom: 200px;
+  background-image: url("../img/details_photo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blogdetails {
+  margin-bottom: 61px;
+
+  &__box {
+    display: grid;
+    grid-template-columns: 799px 345px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 52px;
+  }
+
+  &__heading {
+    margin-bottom: 21px;
+    @extend %styleTextDMSerifDisplay;
+    font-size: 50px;
+    line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+  }
+
+  &__articleimg {
+    margin-bottom: 46px;
+    border-radius: 45px;
+    width: -webkit-fill-available;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+  }
+
+  &__date {
+    @extend %styleTextJost16;
+    line-height: 150%; /* 24px */
+    text-transform: capitalize;
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  &__breadcrumb {
+    &:not(:last-child)::after {
+      content: "/";
+      margin-left: 8px;
+      margin-right: 8px;
+      @extend %styleTextJost16;
+      line-height: 150%; /* 24px */
+      text-transform: capitalize;
+    }
+  }
+
+  &__link {
+    @extend %styleTextJost16;
+    line-height: 150%; /* 24px */
+    text-transform: capitalize;
+    transition: all 0.6s ease-out;
+
+    &:hover {
+      color: #cda274;
+      transition: all 0.6s ease-out;
+    }
+    &:active {
+      color: blue;
+      transition: all 0.6s ease-out;
+    }
+  }
+
+  &__text {
+    @extend %styleTextJost;
+    line-height: 150%; /* 33px */
+    margin-bottom: 35px;
+  }
+
+  &__quotes {
+    height: 267px;
+    margin-bottom: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 53px 200px;
+    border-radius: 50px;
+    background: #f4f0ec;
+  }
+
+  &__note {
+    color: $hoverColor;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+  }
+
+  &__detailsbox {
+    margin-bottom: 12px;
+  }
+
+  &__subbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 14px;
+    padding-bottom: 32px;
+  }
+
+  &__span {
+    color: $hoverColor;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+    letter-spacing: 0.4px;
+  }
+
+  &__subtext {
+    @extend %styleTextJost;
+    line-height: 150%; /* 33px */
+  }
+}
+
+.sidebar {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  &__heading {
+    @extend %styleTextDMSerifDisplay;
+    font-size: 25px;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+  }
+
+  &__buttonsbox {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__button {
+    color: $darkColor;
+    font-family: "Jost";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: 0.36px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #f4f0ec;
+    padding: 9px 30px;
+    transition: all 0.6s ease-out;
+
+    &:hover {
+      background-color: $hoverColor;
+      transition: all 0.6s ease-out;
+    }
+  }
+
+  &__button_active {
+    color: #ffffff;
+    background-color: $darkColor;
+  }
+}
