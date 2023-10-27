@@ -19,39 +19,39 @@ export default {
       products: [
         {
           id: 1,
-          name: "iPhone 14",
-          price: 850,
-          aviable: true,
+          name: "product1",
+          price: 99.99,
+          available: true,
         },
         {
           id: 2,
-          name: "iPod 4",
-          price: 210,
-          aviable: false,
+          name: "product2",
+          price: 100,
+          available: true,
         },
         {
           id: 3,
-          name: "iPad 12",
-          price: 620,
-          aviable: true,
+          name: "product3",
+          price: 20,
+          available: true,
         },
         {
           id: 4,
-          name: "iPhone 8",
-          price: 240,
-          aviable: false,
+          name: "product4",
+          price: 150.5,
+          available: false,
         },
         {
           id: 5,
-          name: "iPhone 13",
-          price: 699,
-          aviable: true,
+          name: "product5",
+          price: 77,
+          available: false,
         },
         {
           id: 6,
-          name: "iPod 3",
-          price: 99.99,
-          aviable: true,
+          name: "product6",
+          price: 111,
+          available: true,
         },
       ],
     };
@@ -61,13 +61,8 @@ export default {
 
 <style lang="scss" scoped>
 .products {
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // gap: 10px;
-
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(3, auto);
   justify-content: center;
   gap: 10px;
 }

@@ -1,9 +1,13 @@
 <template>
   <div>
-    <h2>Название продукта: {{ product.name }}</h2>
-    <h3>Цена: {{ formattedPrice }}</h3>
-    <h3 v-if="product.aviable" style="color: green">Наличие: Available</h3>
-    <h3 v-else style="color: red">Наличие: Out of stock</h3>
+    <h2>
+      Название: <span style="color: rgb(14, 95, 76)">{{ product.name }}</span>
+    </h2>
+    <h3>
+      Цена: <span style="color: rgb(14, 95, 76)">{{ formattedPrice }}</span>
+    </h3>
+    <h3 v-if="product.available" style="color: rgb(14, 95, 76)">Available</h3>
+    <h3 v-else style="color: rgb(192, 50, 14)">Out of stock</h3>
   </div>
 </template>
 
@@ -23,10 +27,10 @@ export default {
 
 <style lang="scss" scoped>
 div {
-  width: 400px;
+  width: 300px;
   height: 200px;
   border: 1px solid #000;
-  background-color: bisque;
+  background-color: rgb(179, 223, 226);
   display: flex;
   flex-direction: column;
   gap: 10px;
