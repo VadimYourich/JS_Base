@@ -217,108 +217,7 @@
           of using.
         </p>
         <div class="blog__items">
-          <div class="blog__item">
-            <img
-              class="blog__img"
-              src="@/assets/img/blog_photo1.png"
-              alt="blog photo 1"
-            />
-            <p class="blog__tag">Kitchan Design</p>
-            <div class="blog__content">
-              <h3 class="blog__title">
-                Let’s Get Solution For Building Construction<br />
-                Work
-              </h3>
-              <div class="blog__boxDate">
-                <p class="blog__date">26 December,2022</p>
-                <a class="blog__button" href="#">
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.27101 14.9525L7.21387 8.26683L1.27101 1.58112"
-                      stroke="#292F36"
-                      stroke-width="2"
-                      roke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="blog__item">
-            <img
-              class="blog__img"
-              src="@/assets/img/blog_photo2.png"
-              alt="blog photo 2"
-            />
-            <p class="blog__tag">Living Design</p>
-            <div class="blog__content">
-              <h3 class="blog__title">
-                Low Cost Latest Invented Interior Designing<br />
-                Ideas.
-              </h3>
-              <div class="blog__boxDate">
-                <p class="blog__date">22 December,2022</p>
-                <a class="blog__button" href="#">
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.27101 14.9525L7.21387 8.26683L1.27101 1.58112"
-                      stroke="#292F36"
-                      stroke-width="2"
-                      roke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="blog__item">
-            <img
-              class="blog__img"
-              src="@/assets/img/blog_photo3.png"
-              alt="blog photo 3"
-            />
-            <p class="blog__tag">Interior Design</p>
-            <div class="blog__content">
-              <h3 class="blog__title">
-                Best For Any Office & Business Interior<br />
-                Solution
-              </h3>
-              <div class="blog__boxDate">
-                <p class="blog__date">25 December,2022</p>
-                <a class="blog__button" href="#">
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.27101 14.9525L7.21387 8.26683L1.27101 1.58112"
-                      stroke="#292F36"
-                      stroke-width="2"
-                      roke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+          <CardsComponent :items="items" />
         </div>
       </section>
 
@@ -330,10 +229,12 @@
 <script>
 import HeaderComponent from "./HeaderComponent.vue";
 import FooterComponent from "./FooterComponent.vue";
+import CardsComponent from "./CardsComponent.vue";
 export default {
-  components: { HeaderComponent, FooterComponent },
+  components: { HeaderComponent, FooterComponent, CardsComponent },
   data() {
     return {
+      headTitle: "Interno",
       items: [
         {
           id: 1,

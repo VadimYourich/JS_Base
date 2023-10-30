@@ -88,33 +88,7 @@
         <div class="news__contentbox">
           <h1 class="news__heading">Articles & News</h1>
           <div id="news-articles" class="news__newsbox">
-            <div v-for="item in items" :key="item.id" class="news__item">
-              <img :src="item.src" :alt="item.alt" class="news__itemimg" />
-              <p class="news__tag">{{ item.tag }}</p>
-              <div class="news__content">
-                <h3 class="news__title">{{ item.title }}</h3>
-                <div class="news__boxDate">
-                  <p class="news__date">{{ item.date }}</p>
-                  <a href="blog-details.html" class="news__button">
-                    <svg
-                      width="9"
-                      height="16"
-                      viewBox="0 0 9 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1.27101 14.9525L7.21387 8.26683L1.27101 1.58112"
-                        stroke="#292F36"
-                        stroke-width="2"
-                        roke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <CardsComponent :items="items" />
           </div>
 
           <div class="news__pagination">
@@ -158,10 +132,12 @@
 <script>
 import HeaderComponent from "./HeaderComponent.vue";
 import FooterComponent from "./FooterComponent.vue";
+import CardsComponent from "./CardsComponent.vue";
 export default {
-  components: { HeaderComponent, FooterComponent },
+  components: { HeaderComponent, FooterComponent, CardsComponent },
   data() {
     return {
+      headTitle: "Interno Blog",
       items: [
         {
           id: 1,

@@ -1,0 +1,117 @@
+@import 'vars';
+@import 'mixins';
+@import 'headerfooter';
+
+.projectbanner {
+    height: 356px;
+    margin-bottom: 200px;
+    background-image: url('../img/project.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.projects {
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 61px;
+
+    &__categories {
+        width: 880px;
+        height: 75px;
+        border: 1px solid $hoverColor;
+        border-radius: 18px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__button {
+        width: 220px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: white;
+        border-radius: 18px;
+        transition: all 0.6s ease-out;
+
+        &:hover {
+            background-color: $lightGrayColor;
+            transition: all 0.6s ease-out;
+        }
+    }
+
+    &__button_active {
+        background-color: $hoverColor;
+        color: white;
+    }
+
+    &__box {
+        max-height: 3230px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__project {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__starbox {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    &__content {
+        width: 585px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        width: 300px;
+        height: 62px;
+    }
+
+    &__heading {
+        @extend %styleTextDMSerifDisplay;
+        font-size: 25px;
+        line-height: 125%; /* 31.25px */
+        letter-spacing: 0.5px;
+    }
+
+    &__text {
+        @extend %styleTextJost;
+        line-height: 150%; /* 33px */
+    }
+
+    &__projectlink {
+        transition: all 0.6s ease-out;
+
+        &:hover .projects__icon circle{
+            transition: all 0.6s ease-out;
+            fill: $hoverColor;
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
