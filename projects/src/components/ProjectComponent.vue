@@ -4,7 +4,7 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Interno Blog</title>
+      <title>Project</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
@@ -202,56 +202,56 @@ export default {
           flag: false,
           src: require("@/assets/img/project1.png"),
           heading: "Minimal Bedroom",
-          paragraph: "Decor / Artchitecture",
+          paragraph: "Decor / Architecture",
         },
         {
           id: 2,
           flag: false,
           src: require("@/assets/img/project2.png"),
           heading: "Minimal Bedroom",
-          paragraph: "Decor / Artchitecture",
+          paragraph: "Decor / Architecture",
         },
         {
           id: 3,
           flag: false,
           src: require("@/assets/img/project3.png"),
           heading: "Classic Minimal Bedroom",
-          paragraph: "Decor / Artchitecture",
+          paragraph: "Decor / Architecture",
         },
         {
           id: 4,
           flag: false,
           src: require("@/assets/img/project4.png"),
           heading: "Modern Bedroom",
-          paragraph: "Decor / Artchitecture",
+          paragraph: "Decor / Architecture",
         },
         {
           id: 5,
           flag: false,
           src: require("@/assets/img/project5.png"),
           heading: "Minimal Bedroom table",
-          paragraph: "Decor / Artchitecture",
+          paragraph: "Decor / Architecture",
         },
         {
           id: 6,
           flag: false,
           src: require("@/assets/img/project6.png"),
           heading: "System Table",
-          paragraph: "Decor / Artchitecture",
+          paragraph: "Decor / Architecture",
         },
         {
           id: 7,
           flag: false,
           src: require("@/assets/img/project7.png"),
           heading: "Modern Medroom",
-          paragraph: "Decor / Artchitecture",
+          paragraph: "Decor / Architecture",
         },
         {
           id: 8,
           flag: false,
           src: require("@/assets/img/project8.png"),
           heading: "Modern Bedroom",
-          paragraph: "Decor / Artchitecture",
+          paragraph: "Decor / Architecture",
         },
       ],
       basketProject: [],
