@@ -1,10 +1,12 @@
 @import "vars";
 @import "mixins";
 @import "headerfooter";
-@import "blog";
 @import "cards";
+@import "blog";
 @import "blog-details";
 @import "project";
+@import "projectdetails";
+@import "slider";
 
 * {
   margin: 0;
