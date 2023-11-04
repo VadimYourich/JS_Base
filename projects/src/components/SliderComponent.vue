@@ -29,6 +29,7 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
+
 import "swiper/scss";
 
 import "swiper/scss/zoom";
