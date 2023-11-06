@@ -21,10 +21,22 @@ import HeaderComponent from "./HeaderComponent.vue";
 import FooterComponent from "./FooterComponent.vue";
 import { mapGetters } from "vuex";
 import SliderComponent from "./SliderComponent.vue";
+import { useHead } from "@vueuse/head";
 
 export default {
   name: "ProjectDetails",
   components: { HeaderComponent, FooterComponent, SliderComponent },
+  setup() {
+    useHead({
+      title: "ProjectDetails",
+      meta: [
+        {
+          name: "ProjectDetails",
+          content: "Детализация проектов",
+        },
+      ],
+    });
+  },
   computed: {
     ...mapGetters(["getSliderPictures", "getProjectDetails"]),
   },

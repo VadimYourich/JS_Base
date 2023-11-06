@@ -1,5 +1,4 @@
 @import "vars";
-@import "mixins";
 @import "headerfooter";
 @import "cards";
 @import "blog";
@@ -7,6 +6,7 @@
 @import "project";
 @import "projectdetails";
 @import "slider";
+@import "notfound";
 
 * {
   margin: 0;
@@ -15,6 +15,7 @@
 
 body {
   font-family: "DM Serif Display", sans-serif;
+  background-color: $colorOfSite;
 }
 
 a {
@@ -29,10 +30,6 @@ ul {
 .center {
   padding-left: calc(50% - $widthOfSite / 2);
   padding-right: calc(50% - $widthOfSite / 2);
-}
-
-body {
-  background-color: $colorOfSite;
 }
 
 %styleTextDMSerifDisplay {
