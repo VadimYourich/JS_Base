@@ -2,7 +2,7 @@
   <footer class="footer center">
     <div class="footer__items">
       <div class="footer__logos">
-        <a class="header__logo" href="index.html">
+        <router-link to="/" class="header__logo">
           <svg
             class="header__logoimg"
             width="34"
@@ -17,13 +17,13 @@
             />
           </svg>
           <p class="header__logoText">Interno</p>
-        </a>
+        </router-link>
         <p class="footer__text">
           It&nbsp;is&nbsp;a&nbsp;long established fact that a&nbsp;reader will
           be&nbsp;distracted lookings.
         </p>
         <div class="footer__icons">
-          <a href="#" class="footer__iconlink">
+          <router-link to="#" class="footer__iconlink">
             <svg
               class="footer__icon"
               width="19"
@@ -37,8 +37,8 @@
                 fill="#292F36"
               />
             </svg>
-          </a>
-          <a href="#" class="footer__iconlink">
+          </router-link>
+          <router-link to="#" class="footer__iconlink">
             <svg
               class="footer__icon"
               width="17"
@@ -52,7 +52,7 @@
                 fill="#292F36"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
 
@@ -61,13 +61,17 @@
         <nav class="footer__menu">
           <ul class="footer__menuList">
             <li class="footer__menuItem">
-              <a href="index.html" class="footer__menuLink">Home</a>
+              <router-link to="/" class="footer__menuLink">Home</router-link>
             </li>
             <li class="footer__menuItem">
-              <a href="#" class="footer__menuLink">Project</a>
+              <router-link to="/project" class="footer__menuLink"
+                >Project</router-link
+              >
             </li>
             <li class="footer__menuItem">
-              <a href="blog.html" class="footer__menuLink">Blog</a>
+              <router-link to="/blog" class="footer__menuLink"
+                >Blog</router-link
+              >
             </li>
           </ul>
         </nav>
@@ -79,7 +83,9 @@
           55 East Birchwood Ave.<br />
           Brooklyn, New York 11201
         </p>
-        <a class="footer__email" href="#">contact@interno.com</a>
+        <router-link class="footer__email" to="#"
+          >contact@interno.com</router-link
+        >
         <p class="footer__phone">(123) 456 - 7890</p>
       </div>
     </div>

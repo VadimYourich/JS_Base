@@ -43,7 +43,7 @@
           </div>
           <div class="post__datebox">
             <p class="post__date">26&nbsp;December,2022</p>
-            <a class="post__button" href="#">
+            <router-link class="post__button" to="#">
               <svg
                 class="post__linkimg"
                 width="52"
@@ -61,7 +61,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -77,12 +77,14 @@
 
       <div class="news__pagination">
         <div class="news__paginationbox">
-          <a class="news__paginationlink news__paginationlink_active" href="#"
-            >01</a
+          <router-link
+            class="news__paginationlink news__paginationlink_active"
+            to="#"
+            >01</router-link
           >
-          <a class="news__paginationlink" href="#">02</a>
-          <a class="news__paginationlink" href="#">03</a>
-          <a class="news__paginationlink" href="#">
+          <router-link class="news__paginationlink" to="#">02</router-link>
+          <router-link class="news__paginationlink" to="#">03</router-link>
+          <router-link class="news__paginationlink" to="#">
             <svg
               class="news__paginationimg"
               width="53"
@@ -100,7 +102,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>

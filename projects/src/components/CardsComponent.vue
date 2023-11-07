@@ -6,7 +6,7 @@
       <h3 class="cards__title">{{ item.title }}</h3>
       <div class="cards__boxDate">
         <p class="cards__date">{{ item.date }}</p>
-        <a href="blog-details.html" class="cards__button">
+        <router-link to="/blogdetails" class="cards__button">
           <svg
             width="9"
             height="16"
@@ -22,7 +22,7 @@
               stroke-linejoin="round"
             />
           </svg>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
@@ -30,6 +30,7 @@
 
 <script>
 export default {
+  name: "Cards",
   props: {
     items: Object,
   },

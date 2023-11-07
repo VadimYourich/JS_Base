@@ -11,7 +11,7 @@
             fromavailable, majority.
           </p>
         </div>
-        <a class="banner__button" href="#">
+        <router-link class="banner__button" to="/project">
           Get Started
           <svg
             width="18"
@@ -28,7 +28,7 @@
               stroke-linejoin="round"
             />
           </svg>
-        </a>
+        </router-link>
       </div>
     </div>
   </section>
@@ -37,8 +37,9 @@
     <div class="project__info">
       <h2 class="project__heading">Follow Our Projects</h2>
       <p class="project__text">
-        It is a long established fact that a reader will be distracted by the of
-        readable content of page lookings at its layouts points.
+        It is router-link long established fact that router-link reader will be
+        distracted by the of readable content of page lookings at its layouts
+        points.
       </p>
     </div>
     <div class="project__items">
@@ -53,7 +54,7 @@
             <h3 class="project__title">Modern Kitchan</h3>
             <p class="project__subtitle">Decor / Artchitecture</p>
           </div>
-          <a class="project__button" href="#">
+          <router-link class="project__button" to="/blogdetails">
             <svg
               class="project__icon"
               width="70"
@@ -71,7 +72,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
       <div class="project__item">
@@ -85,7 +86,7 @@
             <h3 class="project__title">Modern Kitchan</h3>
             <p class="project__subtitle">Decor / Artchitecture</p>
           </div>
-          <a class="project__button" href="#">
+          <router-link class="project__button" to="/blogdetails">
             <svg
               class="project__icon"
               width="70"
@@ -103,7 +104,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
       <div class="project__item">
@@ -117,7 +118,7 @@
             <h3 class="project__title">Modern Kitchan</h3>
             <p class="project__subtitle">Decor / Artchitecture</p>
           </div>
-          <a class="project__button" href="#">
+          <router-link class="project__button" to="/blogdetails">
             <svg
               class="project__icon"
               width="70"
@@ -135,7 +136,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
       <div class="project__item">
@@ -149,7 +150,7 @@
             <h3 class="project__title">Modern Kitchan</h3>
             <p class="project__subtitle">Decor / Artchitecture</p>
           </div>
-          <a class="project__button" href="#">
+          <router-link class="project__button" to="/blogdetails">
             <svg
               class="project__icon"
               width="70"
@@ -167,7 +168,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
@@ -197,9 +198,9 @@
   <section class="blog center">
     <h2 class="blog__heading">Articles & News</h2>
     <p class="blog__text">
-      It is a long established fact that a reader will be distracted by the of
-      readable content of a page when lookings at its layouts the points of
-      using.
+      It is router-link long established fact that router-link reader will be
+      distracted by the of readable content of router-link page when lookings at
+      its layouts the points of using.
     </p>
     <div class="blog__items">
       <CardsComponent :items="items" />
