@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import HeaderComponent from "./HeaderComponent.vue";
-import FooterComponent from "./FooterComponent.vue";
+import HeaderComponent from "../components/HeaderComponent.vue";
+import FooterComponent from "../components/FooterComponent.vue";
+import SliderComponent from "../components/SliderComponent.vue";
 import { mapGetters } from "vuex";
-import SliderComponent from "./SliderComponent.vue";
 import { useHead } from "@vueuse/head";
 
 export default {

@@ -210,9 +210,9 @@
 </template>
 
 <script>
-import HeaderComponent from "./HeaderComponent.vue";
-import FooterComponent from "./FooterComponent.vue";
-import CardsComponent from "./CardsComponent.vue";
+import HeaderComponent from "../components/HeaderComponent.vue";
+import FooterComponent from "../components/FooterComponent.vue";
+import CardsComponent from "../components/CardsComponent.vue";
 import { useHead } from "@vueuse/head";
 
 export default {

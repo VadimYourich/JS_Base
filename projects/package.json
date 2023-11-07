@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@vueuse/head": "^2.0.0",
     "core-js": "^3.8.3",
     "swiper": "^11.0.3",
     "unhead": "^1.8.3",
