@@ -1,5 +1,4 @@
 "use strict";
-
 /*
 ###Задание 2
 Вы разрабатываете систему отзывов для вашего веб-сайта. Пользователи могут 
@@ -24,71 +23,52 @@
 делать, пока рано.
 */
 
-const initialData = [
-  {
-    product: "Apple iPhone 13",
-    reviews: [
-      {
-        id: 1,
-        text: "Отличный телефон! Батарея держится долго.",
-      },
-      {
-        id: 2,
-        text: "Камера супер, фото выглядят просто потрясающе.",
-      },
-    ],
-  },
-  {
-    product: "Samsung Galaxy Z Fold 3",
-    reviews: [
-      {
-        id: 3,
-        text: "Интересный дизайн, но дорогой.",
-      },
-    ],
-  },
-  {
-    product: "Sony PlayStation 5",
-    reviews: [
-      {
-        id: 4,
-        text: "Люблю играть на PS5, графика на высоте.",
-      },
-    ],
-  },
-];
-
-const reviewsObj = initialData[initialData.length - 1].reviews;
-let lastReviewsID = reviewsObj[reviewsObj.length - 1].id;
-
-const appContainer = document.getElementById("app");
-const divEl = document.createElement("div");
-
-initialData.forEach((item) => {
-  const spanEl = document.createElement("span");
+var initialData = [{
+  product: "Apple iPhone 13",
+  reviews: [{
+    id: 1,
+    text: "Отличный телефон! Батарея держится долго."
+  }, {
+    id: 2,
+    text: "Камера супер, фото выглядят просто потрясающе."
+  }]
+}, {
+  product: "Samsung Galaxy Z Fold 3",
+  reviews: [{
+    id: 3,
+    text: "Интересный дизайн, но дорогой."
+  }]
+}, {
+  product: "Sony PlayStation 5",
+  reviews: [{
+    id: 4,
+    text: "Люблю играть на PS5, графика на высоте."
+  }]
+}];
+var reviewsObj = initialData[initialData.length - 1].reviews;
+var lastReviewsID = reviewsObj[reviewsObj.length - 1].id;
+var appContainer = document.getElementById("app");
+var divEl = document.createElement("div");
+initialData.forEach(function (item) {
+  var spanEl = document.createElement("span");
   spanEl.className = "product";
-
-  const inputEl = document.createElement("input");
+  var inputEl = document.createElement("input");
   inputEl.id = item.product;
   inputEl.type = "radio";
   inputEl.name = "choice";
-
-  const h3El = document.createElement("h3");
+  var h3El = document.createElement("h3");
   h3El.textContent = item.product;
-
-  const h4El = document.createElement("h4");
+  var h4El = document.createElement("h4");
   h4El.textContent = "Отзывы о товаре:";
-
-  const ulEl = document.createElement("ul");
+  var ulEl = document.createElement("ul");
   ulEl.className = "listReviews";
   ulEl.id = item.product;
-  item.reviews.forEach((txt) => {
-    const liEl = document.createElement("li");
+  item.reviews.forEach(function (txt) {
+    var liEl = document.createElement("li");
     liEl.textContent = txt.text;
     liEl.className = "rev";
     ulEl.append(liEl);
   });
-
   spanEl.appendChild(inputEl);
   spanEl.appendChild(h3El);
   divEl.appendChild(spanEl);
@@ -96,40 +76,30 @@ initialData.forEach((item) => {
   divEl.appendChild(ulEl);
 });
 appContainer.appendChild(divEl);
-
-const addContainer = document.getElementById("add");
-const divRevEl = document.createElement("div");
+var addContainer = document.getElementById("add");
+var divRevEl = document.createElement("div");
 divRevEl.className = "revAdd";
-
-const h2El = document.createElement("h2");
+var h2El = document.createElement("h2");
 h2El.className = "reviewHeading";
 h2El.textContent = "Написать отзыв:";
-
-const infoEl = document.createElement("span");
+var infoEl = document.createElement("span");
 infoEl.textContent = "Чтобы оставить отзыв, надо выбрать продукт.";
-
-const taEl = document.createElement("textarea");
+var taEl = document.createElement("textarea");
 taEl.className = "textarea";
-
-const infEl = document.createElement("span");
+var infEl = document.createElement("span");
 infEl.textContent = "Текст должен иметь не менее 50 знаков, но не более 500";
-
-const btnEl = document.createElement("button");
+var btnEl = document.createElement("button");
 btnEl.type = "button";
 btnEl.className = "checkBtn";
 btnEl.textContent = "Оставить отзыв";
-
-const spanErrorEl = document.createElement("span");
+var spanErrorEl = document.createElement("span");
 spanErrorEl.className = "spanError";
 spanErrorEl.textContent = "";
-
 divRevEl.appendChild(h2El);
 divRevEl.appendChild(infoEl);
 divRevEl.appendChild(taEl);
 divRevEl.appendChild(infEl);
 divRevEl.appendChild(btnEl);
 divRevEl.appendChild(spanErrorEl);
-
 addContainer.appendChild(divRevEl);
-
 renderReviews();
