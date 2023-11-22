@@ -1,0 +1,15 @@
+.buttons {
+  display: flex;
+  gap: 3px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 500px;
+}
