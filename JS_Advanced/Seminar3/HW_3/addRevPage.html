@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page for adding a review</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="functionAdd.js" defer></script>
+    <script src="addRev.js" defer></script>
+  </head>
+  <body>
+    <header class="header center">
+      <div class="header__box">
+        <h3 class="header__heading">Страница добавления отзыва о продукте</h3>
+        <a class="header__link" href="reviewPage.html">Смотреть отзывы</a>
+      </div>
+    </header>
+
+    <section class="container center">
+      <div class="form">
+        <div class="form__box">
+          <p class="form__text">Введите название продукта:</p>
+          <input
+            id="productName"
+            class="form__product"
+            name="productName"
+            type="text"
+          />
+        </div>
+        <div class="form__box">
+          <p class="form__text">Оставьте отзыв:</p>
+          <textarea
+            id="review"
+            class="form__textArea"
+            name="review"
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="form__box">
+          <input type="submit" value="Добавить отзыв" class="addButton" />
+          <p class="form__event"></p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
