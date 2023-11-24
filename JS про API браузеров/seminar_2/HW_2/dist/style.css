@@ -17,14 +17,6 @@ img {
   padding-right: calc(50% - 600px);
 }
 
-.header {
-  height: 70px;
-  padding-top: 15px;
-  background-color: #e1f8e1;
-  display: flex;
-  justify-content: center;
-}
-
 .container {
   margin-top: 30px;
   display: flex;
@@ -35,7 +27,7 @@ img {
 }
 
 .slider {
-  width: 800px;
+  width: 1000px;
   margin-bottom: 10px;
   background-color: beige;
 }
@@ -45,43 +37,44 @@ img {
 
 .buttons {
   display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
+  gap: 25px;
+  margin-bottom: 40px;
 }
 
 .button {
-  width: 240px;
+  width: 250px;
+  height: 40px;
   font-size: 18px;
-  background-color: antiquewhite;
-  border: 1px solid antiquewhite;
-  border-radius: 3px;
+  background-color: rgba(105, 94, 81, 0.248);
+  border: 1px solid #615646;
+  border-radius: 2px;
   transition: all 0.6s ease-out;
 }
 .button:hover {
-  background-color: #e1f8e1;
+  background-color: #744410;
   transition: all 0.6s ease-out;
 }
 
 .pagination {
-  height: 25px;
-  margin-bottom: 10px;
+  height: 35px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .pagination__circle {
-  height: 20px;
-  width: 20px;
-  border: 2px solid #b1afaf;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #636161;
   border-radius: 50%;
-  background-color: antiquewhite;
+  background-color: rgba(105, 94, 81, 0.248);
 }
 .pagination__circle:hover {
-  background-color: black;
+  background-color: #744410;
 }
 
 .active {
-  background-color: black;
+  background-color: rgba(33, 32, 32, 0.452);
 }
